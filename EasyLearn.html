@@ -1,0 +1,150 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><meta http-equiv='Access-Control-Allow-Headers' content='Origin, X-Requested-With, Content-Type, Accept'><meta http-equiv='Access-Control-Allow-Methods' content='GET,POST,PUT,DELETE,OPTIONS'><meta http-equiv='Access-Control-Allow-Origin' content='*'><meta http-equiv='Access-Control-Allow-Credentials' content='true'><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/GameElements_20190131/marked.min.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/GameElements_20190131/gameelements.js'></script><link rel='stylesheet' href='https://fustyles.github.io/webduino/SpBlocklyJS/css/icon_custom.css' /><script src='https://fustyles.github.io/webduino/SpBlocklyJS/TextToSpeech_20220729/texttospeech.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/SpeechRecognition_20220729/speechrecognition.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/openAI_20221212/openAI.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js'></script></head><body>
+<script>
+const delay = (seconds) => {
+    return new Promise((resolve) => {
+        setTimeout(resolve, seconds * 1000);
+    });
+};
+const main = async () => {
+    var _E5_8E_9F_E5_A7_8B_E5_AF_86_E7_A2_BC1, _E5_8E_9F_E5_A7_8B_E5_AF_86_E7_A2_BC2, _E5_8A_A0_E5_AF_86_E5_AF_86_E7_A2_BC1, _E5_8A_A0_E5_AF_86_E5_AF_86_E7_A2_BC2, _E8_AA_9E_E9_9F_B3_E6_9C_97_E8_AE_80_E7_8B_80_E6_85_8B;
+
+    // 描述此函式...
+    async function _E9_95_B7_E6_96_87_E7_B0_A1_E5_8C_96() {
+        openai_chat_initial((String(CryptoJS.AES.decrypt(_E5_8A_A0_E5_AF_86_E5_AF_86_E7_A2_BC1, 'LLM1').toString(CryptoJS.enc.Utf8)) + String(CryptoJS.AES.decrypt(_E5_8A_A0_E5_AF_86_E5_AF_86_E7_A2_BC2, 'LLM2').toString(CryptoJS.enc.Utf8))), (['你是一位博學大師,能理解任何文章。', '任務1:一步一步慢慢思考。', '任務2:請將文章重寫為簡單易懂的版本，保持核心重點，並確保語句清楚流暢。', '任務3:請用短句、清晰的結構，避免冗長描述，使內容更容易理解。', '任務4:避免使用艱澀難懂的字眼，以口語化表達。'].join('')), "gpt-4o");
+        openai_chat_response = async function() {
+            div_set('', "innerHTML", ([fontText(3, '#33cc00', 'Arial', (openai_chat_response_get('br'))), '<br>', '<br>', div_get('', "innerHTML")].join('')));
+            await ttsSpeak(("Microsoft Yating - Chinese (Traditional, Taiwan)"), (openai_chat_response_get('')));
+
+        };
+        div_set('', "innerHTML", ([fontText(3, '#cc0000', 'Arial', (textarea_get('', "value"))), '<br>', '<br>', div_get('', "innerHTML")].join('')));
+        await openai_chat_request((textarea_get('', "value")));
+        textarea_set('', "value", '');
+    }
+
+    // 描述此函式...
+    async function _E9_87_8D_E9_BB_9E_E6_A8_99_E8_A8_98() {
+        openai_chat_initial((String(CryptoJS.AES.decrypt(_E5_8A_A0_E5_AF_86_E5_AF_86_E7_A2_BC1, 'LLM1').toString(CryptoJS.enc.Utf8)) + String(CryptoJS.AES.decrypt(_E5_8A_A0_E5_AF_86_E5_AF_86_E7_A2_BC2, 'LLM2').toString(CryptoJS.enc.Utf8))), (['你是一位博學大師,能理解任何文章。', '任務1:一步一步慢慢思考。', '任務2:請為以下文章標記出重點部分，使用簡潔文字說明每個重點的內容。', '任務3:請將每個重點以項目符號（●）列出，並用簡短句子描述。', '任務4:文章每段的重點加上【重點】標籤，並附簡單解釋。'].join('')), "gpt-4o");
+        openai_chat_response = async function() {
+            div_set('', "innerHTML", ([fontText(3, '#33cc00', 'Arial', (openai_chat_response_get('br'))), '<br>', '<br>', div_get('', "innerHTML")].join('')));
+            await ttsSpeak(("Microsoft Yating - Chinese (Traditional, Taiwan)"), (openai_chat_response_get('')));
+
+        };
+        div_set('', "innerHTML", ([fontText(3, '#cc0000', 'Arial', (textarea_get('', "value"))), '<br>', '<br>', div_get('', "innerHTML")].join('')));
+        await openai_chat_request((textarea_get('', "value")));
+        textarea_set('', "value", '');
+    }
+
+    // 描述此函式...
+    async function _E6_98_93_E8_AE_80_E5_9C_96_E6_96_87() {
+        openai_image_initial((String(CryptoJS.AES.decrypt(_E5_8A_A0_E5_AF_86_E5_AF_86_E7_A2_BC1, 'LLM1').toString(CryptoJS.enc.Utf8)) + String(CryptoJS.AES.decrypt(_E5_8A_A0_E5_AF_86_E5_AF_86_E7_A2_BC2, 'LLM2').toString(CryptoJS.enc.Utf8))), "dall-e-3");
+        openai_image_response = async function() {
+            image_set('', "url", (openai_image_response_get()));
+
+        };
+        await openai_image_request(([openai_chat_response_get('br'), '先慢慢思考回應的文字,', '畫出4格漫畫'].join('')), "1024x1024");
+    }
+
+
+    _E5_8E_9F_E5_A7_8B_E5_AF_86_E7_A2_BC1 = 'sk-proj-8eDH9Z0fdR7TzEBUJFPn1';
+    _E5_8E_9F_E5_A7_8B_E5_AF_86_E7_A2_BC2 = '-kla7EJKgY7BFuZWd4js-p_TU2EjLVV5O8jzdCI09brBUphPGaDGCT3BlbkFJk_4lDh0y9olsIBzkm9eGBAo2AG7ANJK03ZBge639D5384xNuGam8kdkbF8wEvyYHC3C7N0nqkA';
+    _E5_8A_A0_E5_AF_86_E5_AF_86_E7_A2_BC1 = (CryptoJS.AES.encrypt(_E5_8E_9F_E5_A7_8B_E5_AF_86_E7_A2_BC1, 'LLM1').toString());
+    _E5_8A_A0_E5_AF_86_E5_AF_86_E7_A2_BC2 = (CryptoJS.AES.encrypt(_E5_8E_9F_E5_A7_8B_E5_AF_86_E7_A2_BC2, 'LLM2').toString());
+    _E8_AA_9E_E9_9F_B3_E6_9C_97_E8_AE_80_E7_8B_80_E6_85_8B = false;
+    image_create('', '', 1024, 1024, 480, 0, 999, true);
+    head_add_viewport(1, 1, 2, "yes");
+    include_file("css", "", 'https://fustyles.github.io/webduino/GameElements_20190131/test_scroll.css');
+    button_toolbox(0, 0, 63, 63, '#ffffff', '#ff6666', 50, 0, 5, [
+        ['replay', '重設對話'],
+        ['save', '儲存對話'],
+        ['upload_file', '載入對話'],
+        ['volume_off', '語音朗讀'],
+        ['mic_off', '語音辨識'],
+        ['wechat', '長文簡化'],
+        ['auto_fix_high', '重點標記'],
+        ['add_photo_alternate', '易讀圖文']
+    ]);
+    textarea_create('', 78, 10, 52, 3, '請輸入對話', 1, 999, true);
+    async function textarea__keydown(event) {
+        if (event.keyCode == 13) {
+            _E9_95_B7_E6_96_87_E7_B0_A1_E5_8C_96();
+        }
+    };
+    document.getElementById('gametextarea_' + '').addEventListener("keydown", textarea__keydown, true);
+    async function textarea__focus(event) {
+        element_select("gametextarea_");
+    };
+    document.getElementById('gametextarea_' + '').addEventListener("focus", textarea__focus, true);
+    ttsSetProperty(1, 1, 1, "cmn-Hant-TW");
+    ttsSwitch(0);
+    recognition.lang = "cmn-Hant-TW";
+    Recognition_switch(0);
+    SpeechRecognition_interim = document.getElementById("gametextarea_");
+    Recognition_recognitionFinish = async function() {
+        console.log((Recognition_final_get()));
+
+    };
+    div_create('', 400, 465, 70, 70, "double", 10, '#ffcc66', '#ffffff', '#000000', 20, 1, '', 999, true);
+    div_set('', "class", 'container');
+    async function gamebutton_replay_onclick(event) {
+        openai_chat_content_clear();
+        div_set('', "innerHTML", '');
+        textarea_set('', "value", '');
+    };
+    document.getElementById("gamebutton_replay").addEventListener("click", gamebutton_replay_onclick, true);
+    async function gamebutton_save_onclick(event) {
+        openai_chat_content_file("save");
+    };
+    document.getElementById("gamebutton_save").addEventListener("click", gamebutton_save_onclick, true);
+    async function gamebutton_upload_file_onclick(event) {
+        div_set('', "innerHTML", '');
+        openai_chat_content_file("open");
+    };
+    document.getElementById("gamebutton_upload_file").addEventListener("click", gamebutton_upload_file_onclick, true);
+    async function gamebutton_volume_off_onclick(event) {
+        if (_E8_AA_9E_E9_9F_B3_E6_9C_97_E8_AE_80_E7_8B_80_E6_85_8B) {
+            ttsSwitch(0);
+            icon_google("button", 'volume_off', 'volume_off');
+            button_set('volume_off', "color", '#ffffff');
+            ttsState("cancel");
+        } else {
+            ttsSwitch(1);
+            icon_google("button", 'volume_off', 'volume_up');
+            button_set('volume_off', "color", '#3366ff');
+        }
+        _E8_AA_9E_E9_9F_B3_E6_9C_97_E8_AE_80_E7_8B_80_E6_85_8B = !_E8_AA_9E_E9_9F_B3_E6_9C_97_E8_AE_80_E7_8B_80_E6_85_8B;
+    };
+    document.getElementById("gamebutton_volume_off").addEventListener("click", gamebutton_volume_off_onclick, true);
+    async function gamebutton_mic_off_onclick(event) {
+        if (Recognition_state()) {
+            Recognition_switch(0);
+            icon_google("button", 'mic_off', 'mic_off');
+            button_set('mic_off', "color", '#ffffff');
+        } else {
+            Recognition_switch(1);
+            icon_google("button", 'mic_off', 'mic');
+            button_set('mic_off', "color", '#3366ff');
+        }
+    };
+    document.getElementById("gamebutton_mic_off").addEventListener("click", gamebutton_mic_off_onclick, true);
+    async function gamebutton_wechat_onclick(event) {
+        _E9_95_B7_E6_96_87_E7_B0_A1_E5_8C_96();
+    };
+    document.getElementById("gamebutton_wechat").addEventListener("click", gamebutton_wechat_onclick, true);
+    async function gamebutton_auto_fix_high_onclick(event) {
+        _E9_87_8D_E9_BB_9E_E6_A8_99_E8_A8_98();
+    };
+    document.getElementById("gamebutton_auto_fix_high").addEventListener("click", gamebutton_auto_fix_high_onclick, true);
+    async function gamebutton_add_photo_alternate_onclick(event) {
+        _E6_98_93_E8_AE_80_E5_9C_96_E6_96_87();
+    };
+    document.getElementById("gamebutton_add_photo_alternate").addEventListener("click", gamebutton_add_photo_alternate_onclick, true);
+    setInterval(async function() {
+        if ((Recognition_state()) == false) {
+            icon_google("button", 'mic_off', 'mic_off');
+            button_set('mic_off', "color", '#ffffff');
+        }
+    }, 2000);
+};
+main();
+</script>
+</body></html>
