@@ -68,6 +68,12 @@ const main = async () => {
                 spreadsheet_insert("insertrow2", String("gmt_datetime") + "|" + String(Recognition_final_get()), 0, 0, "", 'https://docs.google.com/spreadsheets/d/1DI_NeMvFzzwYvk-nONNlxBARShWUMc7vim1T_c2lEbg/edit?usp=sharing', '健康記錄', "https://script.google.com/macros/s/AKfycbxA3hhTlntwVTOcqngOC_iJL_zLmRwzcDbMYDs7FD8iinNsY9XZsMkD7AcXTIUbEc33EA/exec");
                 //圖片記錄體態
                 video_create1('', 320, 240, 20, 300, true, '', false, false, false, true, true, 1, 999, true, "front", 0);
+                window.addEventListener("keydown", myKeydown, true);
+                async function myKeydown(event) {
+                    if (event.keyCode == 32) {
+                        outputfile_jpg('');
+                    }
+                };
                 outputfile_jpg('');
                 await delay(1);
                 video_set('', "display", '假');
