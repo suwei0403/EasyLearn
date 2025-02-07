@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'><meta http-equiv='Access-Control-Allow-Headers' content='Origin, X-Requested-With, Content-Type, Accept'><meta http-equiv='Access-Control-Allow-Methods' content='GET,POST,PUT,DELETE,OPTIONS'><meta http-equiv='Access-Control-Allow-Origin' content='*'><meta http-equiv='Access-Control-Allow-Credentials' content='true'><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/GameElements_20190131/marked.min.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/GameElements_20190131/gameelements.js'></script><link rel='stylesheet' href='https://fustyles.github.io/webduino/SpBlocklyJS/css/icon_custom.css' /><script src='https://fustyles.github.io/webduino/SpBlocklyJS/holistic_20201012/holistic_video.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/holistic_20201012/holistic.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/SpreadsheetSQL_20210403/spreadsheetsql.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/SpreadsheetSQL_20210403/loader.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/TextToSpeech_20220729/texttospeech.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/SpeechRecognition_20220729/speechrecognition.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/line_20220729/line.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/openAI_20221212/openAI.js'></script></head><body>
+<!DOCTYPE html><html><head><meta charset='utf-8'><meta http-equiv='Access-Control-Allow-Headers' content='Origin, X-Requested-With, Content-Type, Accept'><meta http-equiv='Access-Control-Allow-Methods' content='GET,POST,PUT,DELETE,OPTIONS'><meta http-equiv='Access-Control-Allow-Origin' content='*'><meta http-equiv='Access-Control-Allow-Credentials' content='true'><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/GameElements_20190131/marked.min.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/GameElements_20190131/gameelements.js'></script><link rel='stylesheet' href='https://fustyles.github.io/webduino/SpBlocklyJS/css/icon_custom.css' /><script src='https://fustyles.github.io/webduino/SpBlocklyJS/SpreadsheetSQL_20210403/spreadsheetsql.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/SpreadsheetSQL_20210403/loader.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/TextToSpeech_20220729/texttospeech.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/SpeechRecognition_20220729/speechrecognition.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/line_20220729/line.js'></script></head><body>
 <script>
 const delay = (seconds) => {
     return new Promise((resolve) => {
@@ -6,13 +6,13 @@ const delay = (seconds) => {
     });
 };
 const main = async () => {
-    var _E5_85_A7_E5_AE_B9, _E5_85_A8_E8_BA_AB_E8_BE_A8_E8_AD_98_E6_9A_AB_E5_81_9C_E7_8B_80_E6_85_8B, Line_E6_AC_8A_E6_9D_96, _E8_AA_9E_E9_9F_B3_E8_BE_A8_E8_AD_98_E9_87_8D_E5_95_9F_E8_A8_88_E6_99_82_E5_99_A8, _E5_8A_9F_E8_83_BD_E6_A8_A1_E5_BC_8F, _E9_81_B8_E5_96_AE_E6_96_87_E5_AD_97, _E6_8B_87_E6_8C_87_E8_A7_92_E5_BA_A6, _E9_A3_9F_E6_8C_87_E8_A7_92_E5_BA_A6, _E5_85_A9_E6_8C_87_E8_B7_9D_E9_9B_A2, _E5_85_A9_E6_8C_87_E5_A4_BE_E8_A7_92;
+    var _E5_85_A7_E5_AE_B9, _E5_8A_9F_E8_83_BD_E6_A8_A1_E5_BC_8F, _E8_AA_9E_E9_9F_B3_E8_BE_A8_E8_AD_98_E9_87_8D_E5_95_9F_E8_A8_88_E6_99_82_E5_99_A8, Line_E6_AC_8A_E6_9D_96, _E9_81_B8_E5_96_AE_E6_96_87_E5_AD_97;
 
     // 描述此函式...
     function _E8_A1_A8_E5_96_AE_E5_85_83_E7_B4_A0_E5_88_9D_E5_A7_8B_E5_8C_96() {
         head_add_viewport(0.8, 1, 2, "yes");
-        div_create('', 400, 250, 10, 200, "double", 10, '#3366ff', '#ffffff', '#ff0000', 20, 1, '', 99, true);
-        button_create('OPEN', 250, 100, 20, 10, 1, null, '啟動語音助理', 30, 999, true);
+        div_create('', 540, 95, 10, 200, "double", 10, '#3366ff', '#ffffff', '#ff0000', 20, 1, '', 99, true);
+        button_create('OPEN', 250, 100, 160, 10, 1, null, '啟動語音助理', 30, 999, true);
         async function gamebutton_OPEN_onclick(event) {
             _E8_AA_9E_E9_9F_B3_E5_8A_A9_E7_90_86_E5_88_9D_E5_A7_8B_E5_8C_96();
         };
@@ -23,10 +23,10 @@ const main = async () => {
     function _E5_8A_9F_E8_83_BD_E6_A8_A1_E5_BC_8F_E5_88_9D_E5_A7_8B_E5_8C_96() {
         _E5_8A_9F_E8_83_BD_E6_A8_A1_E5_BC_8F = '';
         Line_E6_AC_8A_E6_9D_96 = 's78FLWGY1GFjNrzuEhtgHmIcfQmw4JKpksNjH4jSOnz';
-        _E9_81_B8_E5_96_AE_E6_96_87_E5_AD_97 = ['(1)語音傳訊與拍照：親子溝通,傳送親情或特殊狀況"求救"。', '<br>', '(2)健康記錄：記錄每天身體狀況,運動量等。', '<br>', '(3)食材登入：記錄每天採購的食材,品項,日期之資訊。', '<br>', '(4)健康食譜：依據冰箱內的食材與使用者健康狀況,提供專屬的健康食譜建議。', '<br>', '(5)銀髮族天使：提供情感交流與陪伴。在緊急情況下,自動傳訊息給家人。'].join('');
+        _E9_81_B8_E5_96_AE_E6_96_87_E5_AD_97 = ['請說出服務類別。"銀髮族的營養師"或"選單"可回到選單文字', '<br>', '(1)語音傳訊與拍照：親子溝通,傳送親情或特殊狀況"求救"。', '<br>', '(2)健康記錄：記錄每天身體狀況,運動量等。', '<br>'].join('');
         div_set('', "innerHTML", _E9_81_B8_E5_96_AE_E6_96_87_E5_AD_97);
         spreadsheet_insert("setcell", "", 1, 1, String('登入時間'), 'https://docs.google.com/spreadsheets/d/1DI_NeMvFzzwYvk-nONNlxBARShWUMc7vim1T_c2lEbg/edit?usp=sharing', '健康記錄', "https://script.google.com/macros/s/AKfycbxA3hhTlntwVTOcqngOC_iJL_zLmRwzcDbMYDs7FD8iinNsY9XZsMkD7AcXTIUbEc33EA/exec");
-        spreadsheet_insert("setcell", "", 1, 2, String('健康狀況'), 'https://docs.google.com/spreadsheets/d/1DI_NeMvFzzwYvk-nONNlxBARShWUMc7vim1T_c2lEbg/edit?usp=sharing', '健康記錄', "https://script.google.com/macros/s/AKfycbxA3hhTlntwVTOcqngOC_iJL_zLmRwzcDbMYDs7FD8iinNsY9XZsMkD7AcXTIUbEc33EA/exec");
+        spreadsheet_insert("setcell", "", 1, 2, String('健康狀況或運動量'), 'https://docs.google.com/spreadsheets/d/1DI_NeMvFzzwYvk-nONNlxBARShWUMc7vim1T_c2lEbg/edit?usp=sharing', '健康記錄', "https://script.google.com/macros/s/AKfycbxA3hhTlntwVTOcqngOC_iJL_zLmRwzcDbMYDs7FD8iinNsY9XZsMkD7AcXTIUbEc33EA/exec");
     }
 
     // 描述此函式...
@@ -64,26 +64,9 @@ const main = async () => {
                 _E6_9C_97_E8_AE_80_E6_96_87_E5_AD_97('已拍照傳送Line Notify');
             } else if (_E5_8A_9F_E8_83_BD_E6_A8_A1_E5_BC_8F == '健康記錄') {
                 _E6_9C_97_E8_AE_80_E6_96_87_E5_AD_97('開啟記錄');
-                iframe_create('', 600, 600, 450, 100, "1", "yes", 'https://docs.google.com/spreadsheets/d/1DI_NeMvFzzwYvk-nONNlxBARShWUMc7vim1T_c2lEbg/edit?gid=0#gid=0', '', 1, 999, true);
                 spreadsheet_insert("insertrow2", String("gmt_datetime") + "|" + String(Recognition_final_get()), 0, 0, "", 'https://docs.google.com/spreadsheets/d/1DI_NeMvFzzwYvk-nONNlxBARShWUMc7vim1T_c2lEbg/edit?usp=sharing', '健康記錄', "https://script.google.com/macros/s/AKfycbxA3hhTlntwVTOcqngOC_iJL_zLmRwzcDbMYDs7FD8iinNsY9XZsMkD7AcXTIUbEc33EA/exec");
-                //圖片記錄體態
-                video_create1('', 320, 240, 20, 300, true, '', false, false, false, true, true, 1, 999, true, "front", 0);
-                window.addEventListener("keydown", myKeydown, true);
-                async function myKeydown(event) {
-                    if (event.keyCode == 32) {
-                        outputfile_jpg('');
-                    }
-                };
-                outputfile_jpg('');
                 await delay(1);
-                video_set('', "display", '假');
                 _E6_9C_97_E8_AE_80_E6_96_87_E5_AD_97('已記錄健康狀況');
-            } else if (_E5_8A_9F_E8_83_BD_E6_A8_A1_E5_BC_8F == '銀髮族天使') {
-                window.open('https://ap10.egame.kh.edu.tw/webbit/live-preview.html#L2RngQOG0ZOp7XPQ9GKo', "_blank");
-            } else if (_E5_8A_9F_E8_83_BD_E6_A8_A1_E5_BC_8F == '食材登入') {
-                _E6_9C_97_E8_AE_80_E6_96_87_E5_AD_97('已登入食材');
-            } else if (_E5_8A_9F_E8_83_BD_E6_A8_A1_E5_BC_8F == '健康食譜') {
-                _E6_9C_97_E8_AE_80_E6_96_87_E5_AD_97('提供健康食譜');
             } else {
                 if ((Recognition_final_get()) == '語音傳訊') {
                     _E5_8A_9F_E8_83_BD_E6_A8_A1_E5_BC_8F = '語音傳訊';
@@ -95,22 +78,6 @@ const main = async () => {
                     div_set('', "innerHTML", '');
                     div_set('', "display", false);
                     _E6_9C_97_E8_AE_80_E6_96_87_E5_AD_97('進入健康記錄模式');
-                } else if ((Recognition_final_get()) == '銀髮族天使' || ((Recognition_final_get()).toLowerCase().indexOf('天使'.toLowerCase()) != -1)) {
-                    _E5_8A_9F_E8_83_BD_E6_A8_A1_E5_BC_8F = '銀髮族天使';
-                    div_set('', "innerHTML", '');
-                    div_set('', "display", true);
-                    window.open('https://ap10.egame.kh.edu.tw/webbit/live-preview.html#L2RngQOG0ZOp7XPQ9GKo', "_blank");
-                    _E6_9C_97_E8_AE_80_E6_96_87_E5_AD_97('進入銀髮族天使模式');
-                } else if ((Recognition_final_get()) == '食材登入') {
-                    _E5_8A_9F_E8_83_BD_E6_A8_A1_E5_BC_8F = '食材登入';
-                    div_set('', "innerHTML", '');
-                    div_set('', "display", false);
-                    _E6_9C_97_E8_AE_80_E6_96_87_E5_AD_97('進入食材登入模式');
-                } else if ((Recognition_final_get()) == '健康食譜') {
-                    _E5_8A_9F_E8_83_BD_E6_A8_A1_E5_BC_8F = '健康食譜';
-                    div_set('', "innerHTML", '');
-                    div_set('', "display", false);
-                    _E6_9C_97_E8_AE_80_E6_96_87_E5_AD_97('進入健康食譜模式');
                 }
             }
 
